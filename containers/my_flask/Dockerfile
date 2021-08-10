@@ -5,6 +5,7 @@ MAINTAINER William Lees william@lees.org.uk
 RUN \ 
   rm -rf /app && \
   apt-get update && \
+  apt-get -y install cron && \
   apt-get -y install vim && \
   apt-get -y install telnet && \
   apt-get -y install git && \
