@@ -27,6 +27,8 @@ RUN \
   mkdir -p /backup/backup.monthly && \
   cp /app/track_imgt_config.yaml /app/imgt/. && \
   cp /app/IMGT_REF*.* /app/static/docs/. && \
+  cp /app/igpdb.fasta /app/static/docs/. && \
+  cp /app/vdjbase.fasta /app/static/docs/. && \
   mkdir /app/imgt/imgt_files && \
   crontab /app/cronjobs
  
