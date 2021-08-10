@@ -33,6 +33,7 @@ services:
     volumes:
         - /root/ogrdb_docker/config/flask:/config
         - /backup:/backup
+        - /root/ogrdb_docker/ogre:/ogre
     restart: unless-stopped 
   mariadb:
     image: linuxserver/mariadb
