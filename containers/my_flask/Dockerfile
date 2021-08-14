@@ -12,6 +12,8 @@ RUN \
   apt-get -y install dos2unix && \
   apt-get -y install mariadb-client && \
   git clone https://github.com/airr-community/ogrdb.git /app && \
+  mv /app/migrations /app/migrations.old && \
+  mkdir -p /config/migrations && \
   ln -s /config/migrations /app/migrations
 COPY app/* /app/
 COPY app/cronjobs /etc/crontabs/root
