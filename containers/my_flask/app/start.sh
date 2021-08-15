@@ -7,24 +7,14 @@ sleep 20
 
 cd /app
 
-
-#while true; do sleep 60; done
-
-
-echo "migrating database"
-if [ ! -f migrations/README ]; then
-  rm migrations/.gitkeep
-  rm exports/.gitkeep
-  flask db init
-fi
-flask db migrate
-flask db upgrade
-
 echo "starting cron"
 service cron start
-echo "starting gunicorn"
-export PYTHONUNBUFFERED=1
-exec gunicorn -b :5000 --timeout 300 --limit-request-line 0 --worker-class gthread --keep-alive 5 --workers=2 --graceful-timeout 900 --access-logfile /config/log/access.log --error-logfile /config/log/error.log --capture-output --log-level debug app:app 
+
+if [ ! -f noflask ]; then
+  echo "starting gunicorn"
+  export PYTHONUNBUFFERED=1
+  exec gunicorn -b :5000 --timeout 300 --limit-request-line 0 --worker-class gthread --keep-alive 5 --workers=2 --graceful-timeout 900 --access-logfile /config/log/access.log --error-logfile /config/log/error.log --capture-output --log-level debug app:app 
+fi
 
 while true; do sleep 60; done
 
