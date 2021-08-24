@@ -1,7 +1,7 @@
 version: '2'
 
 services:
-  flask:
+  ogrdb_flask:
     image: my_flask
     container_name: flask
     volumes:
