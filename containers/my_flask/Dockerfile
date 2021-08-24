@@ -14,7 +14,9 @@ RUN \
   git clone https://github.com/airr-community/ogrdb.git /app && \
   mv /app/migrations /app/migrations.old && \
   mkdir -p /config/migrations && \
-  ln -s /config/migrations /app/migrations
+  ln -s /config/migrations /app/migrations && \
+  mkdir -p /ogre/attachments && \
+  touch /ogre/attachments/noflask
 COPY app/* /app/
 COPY app/cronjobs /etc/crontabs/root
 
