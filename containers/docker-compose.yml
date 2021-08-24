@@ -3,7 +3,7 @@ version: '2'
 services:
   ogrdb_flask:
     image: my_flask
-    container_name: flask
+    container_name: ogrdb_flask
     volumes:
         - /root/ogrdb_docker/config/flask:/config
         - /backup:/backup
