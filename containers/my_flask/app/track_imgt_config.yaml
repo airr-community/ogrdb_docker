@@ -3,10 +3,6 @@
 species:
   Macaca mulatta:
     alias: Macaque
-  Macaca mulatta_AG07107:
-    alias: Macaque_AG07107
-  Macaca mulatta_17573:
-    alias: Macaque_17573
   Homo sapiens:
     alias: Human
   Rattus norvegicus:
@@ -20,28 +16,27 @@ species:
   Oncorhynchus mykiss:
     alias: Rainbow Trout
 
-
 # location of the file on imgt
 file_url: http://www.imgt.org/download/GENE-DB/IMGTGENEDB-ReferenceSequences.fasta-nt-WithoutGaps-F+ORF+inframeP
 gapped_file_url: http://www.imgt.org/download/GENE-DB/IMGTGENEDB-ReferenceSequences.fasta-nt-WithGaps-F+ORF+inframeP
 
-# directory in which to store IMGT files for archival purposes
-file_dir: imgt/imgt_files
-
 # prefix for stored versions of IMGT files. Filenames will be of the form <file_prefix>_date.fasta
 file_prefix: imgt_ref
 
+# directory in which to store IMGT files for archival purposes
+file_dir: /ogre/imgt_files
+
 # filename of log file
-log_file: imgt/imgt_files/log.txt
+log_file: /ogre/imgt_files/log.txt
 
 # filename of reference file used by ogre. Will be kept up to date by track_imgt_ref.py
-ogre_ref_file: static/docs/IMGT_REF.fasta
-gapped_ogre_ref_file: static/docs/IMGT_REF_GAPPED.fasta
+ogre_ref_file: /ogre/imgt_files/IMGT_REF.fasta
+gapped_ogre_ref_file: /ogre/imgt_files/IMGT_REF_GAPPED.fasta
 
 # pickle files created to speed up boot
-imgt_ref_pickle: /ogre/attachments/ref_genes.pickle
-imgt_gapped_ref_pickle: /ogre/attachments/ref_gapped_genes.pickle
-codon_usage_pickle: /ogre/attachments/codon_usage.pickle
+imgt_ref_pickle: /ogre/imgt_files/ref_genes.pickle
+imgt_gapped_ref_pickle: /ogre/imgt_files/ref_gapped_genes.pickle
+codon_usage_pickle: /ogre/imgt_files/codon_usage.pickle
 
 #filename of file to touch to restart ogre (eg ogre.wsgi). Or 'none' for none
 ogre_touch: none
