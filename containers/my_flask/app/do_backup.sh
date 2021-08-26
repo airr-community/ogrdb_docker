@@ -18,7 +18,10 @@ rm -rf $BACKUP_DIR/temp/*
 mysqldump --all-databases -h mariadb -P 3306 -u ogrdb -p75CVi8SFqsjifY >/config/log/sqldump
 
 # Backup logs and config
+
+mkdir -p $BACKUP_DIR/temp/config
 cp -r /config/*  $BACKUP_DIR/temp/config/.
+mkdir -p $BACKUP_DIR/temp/ogre
 cp -r /ogre/*  $BACKUP_DIR/temp/ogre/.
 
 cd $BACKUP_DIR/temp
