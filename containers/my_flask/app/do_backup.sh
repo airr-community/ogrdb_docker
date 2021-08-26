@@ -15,10 +15,11 @@ rm $BACKUP_DIR/incoming/*
 rm -rf $BACKUP_DIR/temp/*
 
 # Dump MySQL tables
-mysqldump --all-databases -h mariadb -P 3306 -u root -pgsdfgtwevdfg >/config/log/sqldump
+mysqldump --all-databases -h mariadb -P 3306 -u ogrdb -p75CVi8SFqsjifY >/config/log/sqldump
 
 # Backup logs and config
-cp -r /config/*  $BACKUP_DIR/temp/.
+cp -r /config/*  $BACKUP_DIR/temp/config/.
+cp -r /ogre/*  $BACKUP_DIR/temp/ogre/.
 
 cd $BACKUP_DIR/temp
 

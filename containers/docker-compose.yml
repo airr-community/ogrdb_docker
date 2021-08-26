@@ -6,7 +6,7 @@ services:
     container_name: ogrdb_flask
     volumes:
         - /root/ogrdb_docker/config/flask:/config
-        - /backup:/backup
+        - /root/ogrdb_docker/backup:/backup
         - /root/ogrdb_docker/ogre:/ogre
     restart: unless-stopped 
 networks:
