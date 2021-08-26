@@ -40,3 +40,6 @@ codon_usage_pickle: /ogre/imgt_files/codon_usage.pickle
 
 #filename of file to touch to restart ogre (eg ogre.wsgi). Or 'none' for none
 ogre_touch: none
+
+# location for other update files: igpdb, vdjbase
+update_file_dir: /ogre/imgt_files
