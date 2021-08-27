@@ -1,2 +1,6 @@
 
-35 1 * * * /bin/bash /app/do_backup.sh  2>&1
+35 1   *  *  *  /app/do_backup.sh
+21 11  *  *  *  /app/update_imgt.sh
+31 11  *  *  *  /app/update_igpdb.sh
+41 11  *  *  *  /app/update_vdjbase.sh
+51 11   *  *  *  /app/restart_flask.sh

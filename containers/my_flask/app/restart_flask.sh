@@ -1,0 +1,1 @@
+kill -HUP `cat /app/gunicorn.pid`
