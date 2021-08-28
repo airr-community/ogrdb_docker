@@ -23,9 +23,11 @@ mkdir -p $BACKUP_DIR/temp/config
 cp -r /config/*  $BACKUP_DIR/temp/config/.
 mkdir -p $BACKUP_DIR/temp/ogre
 cp -r /ogre/*  $BACKUP_DIR/temp/ogre/.
+mkdir -p $BACKUP_DIR/temp/app
+cp -r /app/*  $BACKUP_DIR/temp/app/.
 
 cd $BACKUP_DIR/temp
-
+	
 # Compress tables and files
 tar -cvzf $BACKUP_DIR/incoming/archive.tgz *
 
