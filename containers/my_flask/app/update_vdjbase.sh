@@ -1,4 +1,4 @@
 #!/bin/sh
 
 cd /ogre/imgt_files
-wget --no-check-certificate -O vdjbase.fasta "https://www.vdjbase.org/data/Alleles?name=&gene=&similar=&show_imgt=on&show_novel=on&download="
+wget --no-check-certificate -O vdjbase.json "https://www.vdjbase.org/api/repseq/all_novels"
