@@ -25,6 +25,8 @@ mkdir -p $BACKUP_DIR/temp/ogre
 cp -r /ogre/*  $BACKUP_DIR/temp/ogre/.
 mkdir -p $BACKUP_DIR/temp/app
 cp -r /app/*  $BACKUP_DIR/temp/app/.
+mkdir -p $BACKUP_DIR/temp/nginx_log
+cp -r /nginx_log/*  $BACKUP_DIR/temp/nginx_log/.
 
 cd $BACKUP_DIR/temp
 	
