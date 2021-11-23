@@ -10,14 +10,12 @@ cd /app
 echo "starting cron"
 service cron start
 
+
 echo "migrating database"
 
-if [ ! -d migrations ]; then
-  mkdir migrations
-fi
-
 if [ ! -f migrations/README ]; then
-  rm -rf migrations/*
+  echo "creating migrations database"
+  rm -rf migrations
   flask db init
 fi
 flask db migrate
