@@ -40,4 +40,4 @@ codon_usage_pickle: /ogre/attachments/codon_usage.pickle
 ogre_touch: none
 
 # location for other update files: igpdb, vdjbase
-update_file_dir: static/docs
+update_file_dir: /ogre/imgt_files
