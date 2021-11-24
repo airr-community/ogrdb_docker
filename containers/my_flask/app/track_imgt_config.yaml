@@ -32,9 +32,9 @@ ogre_ref_file: static/docs/IMGT_REF.fasta
 gapped_ogre_ref_file: static/docs/IMGT_REF_GAPPED.fasta
 
 # pickle files created to speed up boot
-imgt_ref_pickle: attachments/ref_genes.pickle
-imgt_gapped_ref_pickle: attachments/ref_gapped_genes.pickle
-codon_usage_pickle: attachments/codon_usage.pickle
+imgt_ref_pickle: /ogre/attachments/ref_genes.pickle
+imgt_gapped_ref_pickle: /ogre/attachments/ref_gapped_genes.pickle
+codon_usage_pickle: /ogre/attachments/codon_usage.pickle
 
 #filename of file to touch to restart ogre (eg ogre.wsgi). Or 'none' for none
 ogre_touch: none
