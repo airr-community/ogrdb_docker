@@ -22,14 +22,14 @@ gapped_file_url: http://www.imgt.org/download/GENE-DB/IMGTGENEDB-ReferenceSequen
 file_prefix: imgt_ref
 
 # directory in which to store IMGT files for archival purposes
-file_dir: imgt/imgt_files
+file_dir: /ogre/imgt_files
 
 # filename of log file
-log_file: imgt/imgt_files/log.txt
+log_file: /ogre/imgt_files/log.txt
 
 # filename of reference file used by ogre. Will be kept up to date by track_imgt_ref.py
-ogre_ref_file: static/docs/IMGT_REF.fasta
-gapped_ogre_ref_file: static/docs/IMGT_REF_GAPPED.fasta
+ogre_ref_file: /ogre/imgt_files/IMGT_REF.fasta
+gapped_ogre_ref_file: /ogre/imgt_files/IMGT_REF_GAPPED.fasta
 
 # pickle files created to speed up boot
 imgt_ref_pickle: /ogre/attachments/ref_genes.pickle
