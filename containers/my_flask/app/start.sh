@@ -13,7 +13,6 @@ service cron start
 echo "updating reference files"
 ./update_imgt.sh
 ./update_igpdb.sh
-./update_vdjbase.sh
 
 
 if [ ! -f /ogre/attachments/noflask ]; then
