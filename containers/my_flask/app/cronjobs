@@ -4,5 +4,5 @@
 31 21  *  *  *  /app/update_igpdb.sh
 41 21  *  *  *  /app/update_vdjbase.sh
 51 21   *  *  *  /app/restart_flask.sh
-1  *  *  *  *  /app/zenodo_dump.sh >/app/zenodo_dump.log
+*  *  28  *  *  /app/zenodo_dump.sh >/app/zenodo_dump.log
 	
