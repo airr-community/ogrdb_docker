@@ -41,6 +41,8 @@ fi
 mkdir $destination
 mv -v $source/* $destination
 
+python /app/healthchecks.py ogrdb-backups log -m "backup file stored at $destination"
+
 # daily - keep for 14 days
 find $storage/backup.daily/ -maxdepth 1 -mtime +14 -type d -exec rm -rv {} \;
 
