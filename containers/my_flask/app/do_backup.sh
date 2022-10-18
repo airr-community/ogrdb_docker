@@ -5,7 +5,7 @@
 BACKUP_DIR=/backup
 TEMP_DIR=/tmp
 
-slug=ogrdb-backup
+slug=ogrdb-backups
 python /app/healthchecks.py $slug start
 
 # Precautionary cleanup
@@ -46,7 +46,7 @@ then
 	python /app/healthchecks.py vdjbase-backups fail -m "$updatedfile is implausibly small"
 	exit
 else
-	echo "$updatedfileis a reasonable size"
+	echo "$updatedfile is a reasonable size"
 fi
 
 # Backup logs and config
@@ -91,7 +91,7 @@ then
 	python /app/healthchecks.py vdjbase-backups fail -m "$updatedfile is implausibly small"
 	exit
 else
-	echo "$updatedfileis a reasonable size"
+	echo "$updatedfile is a reasonable size"
 fi
 
 # Cleanup
