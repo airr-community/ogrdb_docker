@@ -5,7 +5,7 @@ wget --tries=2 -O vdjbase_status localhost:5000/vdjbase_import
 
 updatedfile=vdjbase_status
 slug=ogrdb-vdjbase
-minsize=100
+minsize=10
 
 if ! [ $(find "$updatedfile") ]
 then
@@ -30,7 +30,7 @@ then
 	python /app/healthchecks.py vdjbase-backups fail -m "$updatedfile is implausibly small"
 	exit
 else
-	echo "$updatedfileis a reasonable size"
+	echo "$updatedfile is a reasonable size"
 fi
 
 python /app/healthchecks.py $slug success

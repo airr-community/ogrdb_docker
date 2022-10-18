@@ -30,7 +30,7 @@ then
 	python /app/healthchecks.py vdjbase-backups fail -m "$updatedfile is implausibly small"
 	exit
 else
-	echo "$updatedfileis a reasonable size"
+	echo "$updatedfile is a reasonable size"
 fi
 
 python /app/healthchecks.py $slug success
