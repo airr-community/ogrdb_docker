@@ -2,7 +2,7 @@
 # Modify this file to use the required zenodo token and id, and the ogrdb password
 
 slug=ogrdb-zenodo
-python /app/healthchecks.py $slug start
+/usr/local/bin/python /app/healthchecks.py $slug start
 
 cd /tmp
 /usr/bin/mysqldump -h mariadb -P 3306 -u ogrdb -p75CVi8SFqsjifY --ignore-table=ogrdb.alembic_version --ignore-table=ogrdb.role --ignore-table=ogrdb.roles_submissions --ignore-table=ogrdb.roles_users --ignore-table=ogrdb.user ogrdb >ogrdb_dump.sql  
@@ -13,7 +13,7 @@ minsize=5000
 
 if ! [ $(find "$updatedfile") ]
 then
-    python /app/healthchecks.py infra-goaccess fail -m "$updatedfile not created"
+    /usr/local/bin/python /app/healthchecks.py infra-goaccess fail -m "$updatedfile not created"
 	exit
 else
 	echo "$updatedfile exists"
@@ -21,7 +21,7 @@ fi
 
 if [ $(find "$updatedfile" -mmin +60) ]
 then
-	python /app/healthchecks.py vdjbase-backups -m "$updatedfile not updated"
+	/usr/local/bin/python /app/healthchecks.py vdjbase-backups -m "$updatedfile not updated"
 	exit
 else
 	echo "$updatedfile updated"
@@ -31,7 +31,7 @@ backupsize=$(find "$updatedfile" -printf "%s")
 
 if [ $backupsize -lt $minsize ]
 then
-	python /app/healthchecks.py vdjbase-backups fail -m "$updatedfile is implausibly small"
+	/usr/local/bin/python /app/healthchecks.py vdjbase-backups fail -m "$updatedfile is implausibly small"
 	exit
 else
 	echo "$updatedfile is a reasonable size"
@@ -40,4 +40,4 @@ fi
 cd /app
 /usr/local/bin/python zenodo.py deposition_id /tmp/ogrdb_archive.tgz 0
 
-python /app/healthchecks.py $slug success
+/usr/local/bin/python /app/healthchecks.py $slug success
