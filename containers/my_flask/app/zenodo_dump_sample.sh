@@ -38,6 +38,6 @@ else
 fi
 
 cd /app
-/usr/local/bin/python zenodo.py deposition_id /tmp/ogrdb_archive.tgz 0
+/usr/local/bin/python zenodo.py 7148774 /tmp/ogrdb_archive.tgz 0
 
 /usr/local/bin/python /app/healthchecks.py $slug success
