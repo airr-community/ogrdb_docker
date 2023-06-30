@@ -15,8 +15,8 @@ species:
     alias: Rainbow Trout
 
 # location of the file on imgt
-file_url: http://www.imgt.org/download/GENE-DB/IMGTGENEDB-ReferenceSequences.fasta-nt-WithoutGaps-F+ORF+inframeP
-gapped_file_url: http://www.imgt.org/download/GENE-DB/IMGTGENEDB-ReferenceSequences.fasta-nt-WithGaps-F+ORF+inframeP
+file_url: https://www.imgt.org/download/GENE-DB/IMGTGENEDB-ReferenceSequences.fasta-nt-WithoutGaps-F+ORF+inframeP
+gapped_file_url: https://www.imgt.org/download/GENE-DB/IMGTGENEDB-ReferenceSequences.fasta-nt-WithGaps-F+ORF+inframeP
 
 # prefix for stored versions of IMGT files. Filenames will be of the form <file_prefix>_date.fasta
 file_prefix: imgt_ref
