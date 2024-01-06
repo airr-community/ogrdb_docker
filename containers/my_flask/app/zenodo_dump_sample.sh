@@ -40,4 +40,9 @@ fi
 cd /app
 /usr/local/bin/python zenodo.py 7148774 /tmp/ogrdb_archive.tgz 0
 
-/usr/local/bin/python /app/healthchecks.py $slug success
+if tail -n 5 zenodo_dump.log | grep -iq "Error" 
+then
+	/usr/local/bin/python /app/healthchecks.py $slug fail -m "`tail -n 5 zenodo_dump.log | grep -i "Error"`"
+else
+	/usr/local/bin/python /app/healthchecks.py $slug success
+fi
