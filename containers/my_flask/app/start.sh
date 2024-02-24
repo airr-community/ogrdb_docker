@@ -12,7 +12,6 @@ service cron start
 
 echo "updating reference files"
 ./update_imgt.sh
-./update_igpdb.sh
 
 
 if [ ! -f /ogre/attachments/noflask ]; then
