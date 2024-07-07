@@ -2,17 +2,17 @@
 
 species:
   Macaca mulatta:
-    alias: Macaque
+    alias: Macaca mulatta
   Homo sapiens:
-    alias: Human,Human_TCR
+    alias: Homo sapiens
   Rattus norvegicus:
-    alias: Rat
+    alias: Rattus norvegicus
   Mus musculus:
-    alias: Mouse
+    alias: Mus musculus
   Salmo salar:
-    alias: Salmon
+    alias: Salmo salar
   Oncorhynchus mykiss:
-    alias: Rainbow Trout
+    alias: Oncorhynchus mykiss
 
 # location of the file on imgt
 file_url: https://www.imgt.org/download/GENE-DB/IMGTGENEDB-ReferenceSequences.fasta-nt-WithoutGaps-F+ORF+inframeP
