@@ -18,7 +18,7 @@ rm $BACKUP_DIR/incoming/*
 rm -rf $BACKUP_DIR/temp/*
 
 # Dump MySQL tables
-mysqldump --all-databases -h mariadb -P 3306 -u ogrdb -p75CVi8SFqsjifY >/config/log/sqldump
+mysqldump --skip-ssl --all-databases -h mariadb -P 3306 -u ogrdb -p75CVi8SFqsjifY >/config/log/sqldump
 
 updatedfile=/config/log/sqldump
 minsize=1000
