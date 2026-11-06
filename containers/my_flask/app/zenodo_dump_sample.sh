@@ -1,11 +1,11 @@
 #!/bin/bash
-# Modify this file to use the required zenodo token and id, and the ogrdb password
+# Modify this file to use the required zenodo token and id, and the db pw
 
 slug=ogrdb-zenodo
 /usr/local/bin/python /app/healthchecks.py $slug start
 
 cd /tmp
-/usr/bin/mysqldump -h mariadb -P 3306 -u ogrdb -p75CVi8SFqsjifY --ignore-table=ogrdb.alembic_version --ignore-table=ogrdb.role --ignore-table=ogrdb.roles_submissions --ignore-table=ogrdb.roles_users --ignore-table=ogrdb.user ogrdb >ogrdb_dump.sql  
+/usr/bin/mysqldump -h mariadb -P 3306 -u ogrdb -pxxxxxxxxx --ignore-table=ogrdb.alembic_version --ignore-table=ogrdb.role --ignore-table=ogrdb.roles_submissions --ignore-table=ogrdb.roles_users --ignore-table=ogrdb.user ogrdb >ogrdb_dump.sql  
 /bin/tar -cvzf ogrdb_archive.tgz ogrdb_dump.sql /ogre/attachments/*
 
 updatedfile=ogrdb_archive.tgz
@@ -38,7 +38,7 @@ else
 fi
 
 cd /app
-/usr/local/bin/python zenodo.py 7148774 /tmp/ogrdb_archive.tgz 0
+/usr/local/bin/python zenodo.py xxxxxx /tmp/ogrdb_archive.tgz 0
 
 if tail -n 5 zenodo_dump.log | grep -iq "Error" 
 then
